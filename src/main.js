@@ -5,9 +5,6 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import 'bootstrap/dist/css/bootstrap.css'
- import './css/app.css'
-
 import './lib/mui-master/dist/css/mui.css'
 
 // 导入所有的 MIntUI 组件
@@ -21,21 +18,18 @@ import './lib/mui-master/dist/css/mui.css'
 
 // 按需导入 Mint-UI 组件
 
-import { Button } from 'mint-ui'
+import { Header } from 'mint-ui';
 
-// 使用 Vue.component 注册 按钮组件
+// 使用 Vue.component 注册 固定头部组件
 
-Vue.component(Button.name,Button)
-
+Vue.component(Header.name, Header);
 import  app from  './App.vue'
-
-import router from './router.js'
 
 const vm = new Vue({
 
-render:c => c(app),
+render:c => c(app)
 
- router
+ //router
 
 
 }).$mount("#app")

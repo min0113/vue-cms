@@ -1,75 +1,53 @@
 <template>
- <div>
-     <h1> 这是 APP 组件</h1>
-
-     <mt-button type="primary" > primary</mt-button>
-     <mt-button size="small" type="danger">small</mt-button>
-     <button type="button" class="mui-btn mui-btn-royal">
-         紫色
-     </button>
 
 
+   <div class="v-container">
+       <header>
+           <mt-header fixed title="固定在顶部"></mt-header>
 
+           <h1> content</h1>
 
-     <router-link to="/account">
-         <mt-button plain>account</mt-button>
-     </router-link>
-     <router-link to="/goodslist">
-         <mt-button icon="back">goodslist</mt-button>
-     </router-link>
-     <router-view></router-view>
+           <nav class="mui-bar mui-bar-tab">
+               <a class="mui-tab-item mui-active" href="#tabbar">
+                   <span class="mui-icon mui-icon-home"></span>
+                   <span class="mui-tab-label">首页</span>
+               </a>
+               <a class="mui-tab-item" href="#tabbar-with-chat">
+                   <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+                   <span class="mui-tab-label">消息</span>
+               </a>
+               <a class="mui-tab-item" href="#tabbar-with-contact">
+                   <span class="mui-icon mui-icon-contact"></span>
+                   <span class="mui-tab-label">通讯录</span>
+               </a>
+               <a class="mui-tab-item" href="#tabbar-with-map">
+                   <span class="mui-icon mui-icon-gear"></span>
+                   <span class="mui-tab-label">设置</span>
+               </a>
+           </nav>
 
- </div>
+       </header>
 
+   </div>
 
 
 </template>
 
 <script>
 
-    import { Toast } from 'mint-ui';
-
-
-    export  default {
-
-        data () {
-            return{
-                toastInstanse:null
-            }
-        },
-
-        created (){
-            this.getList()
-        },
-        methods:{
-            getList() {
-                this.show()
-
-                setTimeout(() =>{
-                    this.toastInstanse.close()
-                },3000)
-            },
-            show () {
-                this.toastInstanse =  Toast({
-                    message:"提示",
-                    position:'top',
-                    duration:-1,
-                    iconClass:'glyphicon glyphicon-time',
-                    className:'my-icon'
-
-                })
-            }
-        }
-    }
-
 
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 
-    .my-icon>i{
-        color: #2AC845;
-    }
+
+ .v-container{
+        padding: 40px 0 50px 0px;
+
+
+ }
+
 
 </style>
+
